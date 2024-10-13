@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.whatsp.ChatActivity"
+    android:background="#ece5dd">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatrecycler"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/sendmassageLayout"
+        android:layout_weight="1"
+        />
+
+    <RelativeLayout
+        android:id="@+id/sendmassageLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <EditText
+            android:id="@+id/massageEdit"
+            android:hint="Write Your Massage Here"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/sendmassageIcon"
+            android:padding="15dp"
+            android:background="@drawable/edit_style_box"
+            />
+
+        <ImageView
+            android:id="@+id/sendmassageIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:padding="15dp"
+            android:src="@drawable/send_icon"
+            />
+    </RelativeLayout>
+</RelativeLayout>
